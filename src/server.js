@@ -1,6 +1,7 @@
 //servidor
 const express = require('express')
 const server = express()
+const port = process.env.PORT || 5500
 
 const {
     pageLanding,
@@ -29,4 +30,4 @@ server.get("/study", pageStudy)
 server.get("/give-classes", pageGiveClasses)
 server.post("/save-classes", saveClasses)
 //start do servidor
-server.listen(5500)
+server.listen(port)
